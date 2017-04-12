@@ -1,17 +1,18 @@
 import React from 'react';
 import Moment from 'moment';
+import '../style/SingleArticle.css';
 
 const SingleArticle = (props) => {
   return (
-    <section className="article-info">
-      <div className="article-title">
-        <img src={props.imageUrl}></img>
+    <tr className="article-info">
+      <td className="article-element article-title">
+        <img src={props.imageUrl} alt=""></img>
         <h3>{props.title}</h3>
-      </div>
-      <div className="author">{props.authorName}</div>
-      <div className="wordcount">{props.words}</div>
-      <div className="submitted">{Moment(props.published).fromNow()}</div>
-    </section>
+      </td>
+      <td className="article-element author">{props.authorName}</td>
+      <td className="article-element wordcount">{props.words}</td>
+      <td className="article-element submitted">{Moment(props.published).fromNow()}</td>
+    </tr>
   )
 }
 

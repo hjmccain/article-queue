@@ -1,0 +1,21 @@
+/* mic green: #00FFBF */
+
+/*
+font-family: 'Palanquin Dark', sans-serif;
+font-family: 'Lato', sans-serif;
+*/
+
+.display-container {
+  /*width: 80%;*/
+  max-width: 1200px;
+  padding: 20px 30px 30px 30px;
+
+  color: #FFFFFF;
+  background-color: #000000;
+
+  font-family: 'Lato', sans-serif;
+}
+
+table {
+  border: 1px solid white;
+}
