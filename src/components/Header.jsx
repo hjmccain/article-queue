@@ -3,10 +3,10 @@ import React from 'react';
 const Header = () => {
   return (
     <header>
-      <div>Unpublished Articles {66}</div>
-      <div>Author</div>
-      <div>Words</div>
-      <div>Submitted</div>
+      <div className="header-element">Unpublished Articles {66}</div>
+      <div className="header-element">Author</div>
+      <div className="header-element">Words</div>
+      <div className="header-element">Submitted</div>
     </header>
   )
 }
