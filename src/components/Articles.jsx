@@ -7,6 +7,7 @@ const Articles = () => {
     <div>
       {data.map(item => {
         return <SingleArticle
+            key={item.id}
             id={item.id}
             title={item.title}
             published={item.publish_at}
