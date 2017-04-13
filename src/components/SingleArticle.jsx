@@ -15,7 +15,7 @@ const SingleArticle = (props) => {
       </td>
       <td className="article-element author"><p>{props.authorName}</p></td>
       <td className="article-element wordcount"><p>{props.words}</p></td>
-      <td className="article-element submitted"><p>{Moment(props.published).fromNow()}</p></td>
+      <td className="article-element submitted"><p>{Moment(props.published, "YYYY-M-DD h:mm:ss").fromNow()}</p></td>
     </tr>
   )
 }
