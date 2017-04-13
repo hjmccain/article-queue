@@ -1,10 +1,10 @@
 /* mic green: #00FFBF */
 
 th {
-  color: #00FFBF;
-  background-color: #000000;
-
+  background-color: #00FFBF;
+  color: #000000;
+  padding: 5px 20px 5px 20px;
   font-family: 'Lato', sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 20px;
 }

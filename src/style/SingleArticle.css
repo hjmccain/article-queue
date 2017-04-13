@@ -1,3 +1,45 @@
+table {
+  border-collapse: collapse;
+}
+
+tbody {
+  background: #FFFFFF;
+  color: #000000;
+}
+
+p {
+  text-align: center;
+  font-size: 16px;
+  color: #7F7F7F;
+}
+
+p, h3 {
+  margin: 0px;
+  padding: 0px 10px 0px 10px;
+}
+
+td {
+  padding: 0px;
+  border: 10px solid #000000;
+  background-image:
+    linear-gradient(
+      #EDEDED,
+      white 45%
+    );
+}
+
+.crop-img {
+  display: inline-block;
+  margin: 5px;
+  border: 2px solid #000000;
+  height: 60px;
+  width: 60px;
+  overflow: hidden;
+  position: relative;
+  top: 2px;
+}
+
 img {
-  height: 70px;
+  display: inline-block;
+  height: 60px;
 }

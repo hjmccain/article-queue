@@ -1,8 +1,9 @@
 import React from 'react';
+import '../style/MoreButton.css';
 
 const MoreButton = () => {
   return (
-    <div>
+    <div className="button-container">
       <button onClick={() => {console.log('Load more articles')}}>Load More</button>
     </div>
   )

@@ -1,10 +1,11 @@
 import React from 'react';
 import { data } from './Data';
 import SingleArticle from './SingleArticle';
+import '../style/Articles.css';
 
 const Articles = () => {
   return (
-    <div>
+    <tbody>
       {data.map(item => {
         return <SingleArticle
             key={item.id}
@@ -21,7 +22,7 @@ const Articles = () => {
             tagArray={item.tags}
           />
       })}
-    </div>
+    </tbody>
   )
 }
 

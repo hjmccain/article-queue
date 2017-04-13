@@ -1,0 +1,13 @@
+.button-container {
+  margin: 20px 0px 20px 0px;
+  text-align: center;
+}
+
+button {
+  border: none;
+  background-color: #00FFBF;
+  padding: 10px 20px 10px 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
