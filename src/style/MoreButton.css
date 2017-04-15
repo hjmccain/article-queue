@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+.button-container i {
+  padding: 5px 1px 0px 1px;
+}
+
 .disabled {
   background-color: #00FFBF;
   background-color: black;

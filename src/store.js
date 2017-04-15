@@ -20,6 +20,6 @@ store.subscribe(() => {
   saveState({
     wordsLowToHigh: store.getState().wordsLowToHigh,
     submittedLowToHigh: store.getState().wordsLowToHigh,
-    data: store.getState().data.slice(0, 10)
+    data: []
   });
 });

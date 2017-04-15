@@ -7,7 +7,7 @@ class MoreButton extends React.Component {
   constructor() {
     super();
     this.state = {
-      buttonText: 'Load more',
+      buttonText: <i className="fa fa-plus fa-3x" aria-hidden="true"></i>,
       buttonClass: '',
       disabled: false
     }
