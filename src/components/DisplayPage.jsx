@@ -8,8 +8,9 @@ import mic from '../../public/Mic.png';
 
 class DisplayPage extends React.Component {
   componentWillMount() {
-    this.props.getData(10);
+    this.props.getData(10)
   }
+
   render() {
     return (
       <div className="display-container">

@@ -1,17 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import { data } from './Data';
 import SingleArticle from './SingleArticle';
 import '../style/Articles.css';
 
 const Articles = (props) => {
-
-  if (props.sortedByCategory === 'Words') {
-    props.wordsLowToHigh ?
-    props.data.sort((a, b) => a.words - b.words):
-    props.data.sort((a, b) => b.words - a.words);
-  }
-
   return (
     <tbody>
       {props.data.map(item => {
