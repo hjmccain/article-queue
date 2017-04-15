@@ -16,6 +16,7 @@ const state = (state = {
         state.data.sort((a, b) => b.words - a.words);
         return state = Object.assign({}, state, {
           wordsLowToHigh: order,
+          submittedLowToHigh: null,
           data: sortedData
         });
       }
@@ -30,6 +31,7 @@ const state = (state = {
         });
         return state = Object.assign({}, state, {
           submittedLowToHigh: order,
+          wordsLowToHigh: null,
           data: sortedData
         });
       }

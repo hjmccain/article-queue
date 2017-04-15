@@ -8,7 +8,7 @@ import mic from '../../public/Mic.png';
 
 class DisplayPage extends React.Component {
   componentWillMount() {
-    this.props.getData(10)
+    this.props.getData(this.props.currentEnd || 10)
   }
 
   render() {
@@ -23,8 +23,12 @@ class DisplayPage extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  currentEnd: state.currentEnd
+});
+
 const mapDispatchToProps = (dispatch) => ({
   getData: (currentEnd) => {dispatch(actions.getData(currentEnd)) }
 });
 
-export default connect(null, mapDispatchToProps)(DisplayPage);
+export default connect(mapStateToProps, mapDispatchToProps)(DisplayPage);

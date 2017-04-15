@@ -17,9 +17,5 @@ export const store = createStore(
 ));
 
 store.subscribe(() => {
-  saveState({
-    wordsLowToHigh: store.getState().wordsLowToHigh,
-    submittedLowToHigh: store.getState().wordsLowToHigh,
-    data: []
-  });
+  saveState(store.getState())
 });
