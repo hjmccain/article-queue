@@ -13,14 +13,21 @@ class MoreButton extends React.Component {
     }
   }
 
+  changeText() {
+    this.setState({
+      buttonText: 'That\'s all!',
+      buttonClass: 'disabled',
+      disabled: true
+    });
+  }
+
+  componentWillMount() {
+    if ((this.props.currentEnd + 10) > 50) { this.changeText() }
+  }
+
   moreArticles() {
-    let newEnd = this.props.currentEnd + 10
-    this.props.getData(newEnd);
-    if (newEnd > 50) {
-      this.setState({
-        buttonText: 'That\'s all!', buttonClass: 'disabled', disabled: true
-      });
-    }
+    this.props.getData(this.props.currentEnd + 10);
+    if ((this.props.currentEnd + 10) > 50) { this.changeText() }
   }
 
   render() {
