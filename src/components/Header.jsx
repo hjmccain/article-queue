@@ -20,14 +20,8 @@ const Header = (props) => {
   )
 }
 
-const mapStateToProps = (state) => ({
-  sortedByCategory: state.sortedByCategory,
-  wordsLowToHigh: state.wordsLowToHigh,
-  submittedLowToHigh: state.submittedLowToHigh
-});
-
 const mapDispatchToProps = (dispatch) => ({
   setSort: (category) => {dispatch(actions.setSort(category)) }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(null, mapDispatchToProps)(Header);
