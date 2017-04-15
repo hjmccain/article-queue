@@ -9,12 +9,8 @@ const Articles = (props) => {
 
   if (props.sortedByCategory === 'Words') {
     props.wordsLowToHigh ?
-    data.sort((a, b) => {
-      return a.words - b.words
-    }):
-    data.sort((a, b) => {
-      return b.words - a.words
-    });
+    data.sort((a, b) => a.words - b.words):
+    data.sort((a, b) => b.words - a.words);
   }
 
   return (
