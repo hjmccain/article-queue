@@ -1,7 +1,6 @@
 import React from 'react';
-// import Moment from 'moment';
 import { connect } from 'react-redux';
-import { data } from './Data';
+// import { data } from './Data';
 import SingleArticle from './SingleArticle';
 import '../style/Articles.css';
 
@@ -9,13 +8,13 @@ const Articles = (props) => {
 
   if (props.sortedByCategory === 'Words') {
     props.wordsLowToHigh ?
-    data.sort((a, b) => a.words - b.words):
-    data.sort((a, b) => b.words - a.words);
+    props.data.sort((a, b) => a.words - b.words):
+    props.data.sort((a, b) => b.words - a.words);
   }
 
   return (
     <tbody>
-      {data.map(item => {
+      {props.data.map(item => {
         return <SingleArticle
             key={item.id}
             id={item.id}
@@ -38,7 +37,8 @@ const Articles = (props) => {
 const mapStateToProps = (state) => ({
   sortedByCategory: state.sortedByCategory,
   wordsLowToHigh: state.wordsLowToHigh,
-  submittedLowToHigh: state.submittedLowToHigh
+  submittedLowToHigh: state.submittedLowToHigh,
+  data: state.data
 });
 
 export default connect(mapStateToProps)(Articles);

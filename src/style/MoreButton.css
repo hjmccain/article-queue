@@ -3,6 +3,11 @@
   text-align: center;
 }
 
+.disabled {
+  background-color: #00FFBF;
+  background-color: black;
+}
+
 button {
   border: none;
   background-color: #00FFBF;

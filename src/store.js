@@ -8,11 +8,14 @@ const logger = createLogger();
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-export const persistedState = loadState();
-export const store = createStore(reducer, persistedState, composeEnhancers(
+// export const persistedState = loadState();
+export const store = createStore(
+  reducer,
+  // persistedState,
+  composeEnhancers(
   applyMiddleware(thunk, logger)
 ));
-
-store.subscribe(() => {
-  saveState(store.getState())
-});
+ 
+// store.subscribe(() => {
+//   saveState(store.getState())
+// });
