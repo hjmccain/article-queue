@@ -8,14 +8,18 @@ const logger = createLogger();
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-// export const persistedState = loadState();
+export const persistedState = loadState();
 export const store = createStore(
   reducer,
-  // persistedState,
+  persistedState,
   composeEnhancers(
   applyMiddleware(thunk, logger)
 ));
- 
-// store.subscribe(() => {
-//   saveState(store.getState())
-// });
+
+store.subscribe(() => {
+  saveState({
+    wordsLowToHigh: store.getState().wordsLowToHigh,
+    submittedLowToHigh: store.getState().wordsLowToHigh,
+    data: store.getState().data.slice(0, 10)
+  });
+});
