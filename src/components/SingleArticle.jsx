@@ -1,5 +1,5 @@
 import React from 'react';
-import Moment from 'moment';
+import moment from 'moment';
 import '../style/SingleArticle.css';
 
 const SingleArticle = (props) => {
@@ -15,7 +15,7 @@ const SingleArticle = (props) => {
       </td>
       <td className="article-element author"><p>{props.authorName}</p></td>
       <td className="article-element wordcount"><p>{props.words}</p></td>
-      <td className="article-element submitted"><p>{Moment(props.published, "YYYY-M-DD h:mm:ss").format('YYYY-MM-DD')}</p></td>
+      <td className="article-element submitted"><p>{moment(props.published, "YYYY-M-DD h:mm:ss").fromNow()}</p></td>
     </tr>
   )
 }

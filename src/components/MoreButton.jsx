@@ -7,7 +7,6 @@ class MoreButton extends React.Component {
   constructor() {
     super();
     this.state = {
-      currentEnd: 10,
       buttonText: 'Load more',
       buttonClass: '',
       disabled: false
@@ -15,9 +14,9 @@ class MoreButton extends React.Component {
   }
 
   moreArticles() {
-    this.setState({ currentEnd: this.state.currentEnd += 10 });
-    this.props.getData(this.state.currentEnd);
-    if (this.state.currentEnd > 50) {
+    let newEnd = this.props.currentEnd + 10
+    this.props.getData(newEnd);
+    if (newEnd > 50) {
       this.setState({
         buttonText: 'That\'s all!', buttonClass: 'disabled', disabled: true
       });
@@ -37,8 +36,12 @@ class MoreButton extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  currentEnd: state.currentEnd
+});
+
 const mapDispatchToProps = (dispatch) => ({
   getData: (currentEnd) => {dispatch(actions.getData(currentEnd)) }
 });
 
-export default connect(null, mapDispatchToProps)(MoreButton);
+export default connect(mapStateToProps, mapDispatchToProps)(MoreButton);

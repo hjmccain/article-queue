@@ -1,7 +1,7 @@
 import * as actions from './actions';
+import moment from 'moment';
 
 const state = (state = {
-  sortedByCategory: null,
   wordsLowToHigh: null,
   submittedLowToHigh: null,
   data: []
@@ -22,8 +22,12 @@ const state = (state = {
       if (action.category === 'Submitted') {
         let order = !state.submittedLowToHigh;
         sortedData = order ?
-        state.data.sort((a, b) => a.publish_at - b.publish_at):
-        state.data.sort((a, b) => b.publish_at - a.publish_at);
+        state.data.sort((a, b) => {
+          return +moment(a.publish_at, "YYYY-M-DD h:mm:ss") - +moment(b.publish_at, "YYYY-M-DD h:mm:ss");
+        }):
+        state.data.sort((a, b) => {
+          return +moment(b.publish_at, "YYYY-M-DD h:mm:ss") - +moment(a.publish_at, "YYYY-M-DD h:mm:ss");
+        });
         return state = Object.assign({}, state, {
           submittedLowToHigh: order,
           data: sortedData
@@ -32,6 +36,7 @@ const state = (state = {
     case actions.GET_DATA_SUCCESS:
       return state = Object.assign({}, state, {
         data: [...state.data, ...action.data],
+        currentEnd: action.currentEnd,
         getDataError: false
       });
     case actions.GET_DATA_ERROR:
