@@ -2,6 +2,7 @@
   "name": "visualize",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "logger": "^0.0.1",
     "moment": "^2.18.1",

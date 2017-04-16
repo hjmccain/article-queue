@@ -8,7 +8,9 @@ import mic from '../../public/Mic.png';
 
 class DisplayPage extends React.Component {
   componentWillMount() {
-    this.props.getData(this.props.currentEnd || 10)
+    if (this.props.data.length === 0) {
+      this.props.getData(this.props.currentEnd)
+    }
   }
 
   render() {
@@ -24,7 +26,8 @@ class DisplayPage extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  currentEnd: state.currentEnd
+  currentEnd: state.currentEnd,
+  data: state.data
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -4,7 +4,8 @@ import moment from 'moment';
 const state = (state = {
   wordsLowToHigh: null,
   submittedLowToHigh: null,
-  data: []
+  data: [],
+  currentEnd: 10
 }, action) => {
   switch (action.type) {
     case actions.SET_SORT:
@@ -35,6 +36,7 @@ const state = (state = {
           data: sortedData
         });
       }
+      break;
     case actions.GET_DATA_SUCCESS:
       return state = Object.assign({}, state, {
         data: [...state.data, ...action.data],

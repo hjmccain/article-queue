@@ -2,13 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import SingleArticle from './SingleArticle';
 import '../style/Articles.css';
+import uuidV4 from 'uuid/v4';
 
 const Articles = (props) => {
   return (
     <tbody>
       {props.data.map(item => {
         return <SingleArticle
-            key={item.id}
+            key={uuidV4()}
             id={item.id}
             title={item.title}
             published={item.publish_at}
