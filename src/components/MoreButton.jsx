@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../state/actions';
+import { getData } from '../state/actions';
 import '../style/MoreButton.css';
 
 class MoreButton extends React.Component {
@@ -43,12 +43,4 @@ class MoreButton extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  currentEnd: state.currentEnd
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  getData: (currentEnd) => {dispatch(actions.getData(currentEnd)) }
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(MoreButton);
+export default connect(null, { getData })(MoreButton);

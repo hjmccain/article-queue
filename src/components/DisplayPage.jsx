@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../state/actions';
+import { getData } from '../state/actions';
 import ArticleTable from './ArticleTable';
 import MoreButton from './MoreButton';
 import '../style/DisplayPage.css';
@@ -18,8 +18,11 @@ class DisplayPage extends React.Component {
       <div className="display-container">
         <img src={mic} alt="Mic.com logo"></img>
         <h2>/ unpublished</h2>
-        <ArticleTable />
-        <MoreButton />
+        <ArticleTable
+          data={this.props.data}
+          wordsLowToHigh={this.props.wordsLowToHigh}
+          submittedLowToHigh={this.props.submittedLowToHigh} />
+        <MoreButton currentEnd={this.props.currentEnd} />
       </div>
     )
   }
@@ -27,11 +30,9 @@ class DisplayPage extends React.Component {
 
 const mapStateToProps = (state) => ({
   currentEnd: state.currentEnd,
-  data: state.data
+  data: state.data,
+  wordsLowToHigh: state.wordsLowToHigh,
+  submittedLowToHigh: state.submittedLowToHigh
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  getData: (currentEnd) => {dispatch(actions.getData(currentEnd)) }
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(DisplayPage);
+export default connect(mapStateToProps, { getData })(DisplayPage);
