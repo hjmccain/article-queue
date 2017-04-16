@@ -28,7 +28,8 @@ const Header = (props) => {
   return (
     <thead>
       <tr>
-        <th className="header-element article-title" colSpan="2">Unpublished Articles ({66})</th>
+        <th className="header-element article-title" colSpan="2">Unpublished Articles
+          <span> ({`${props.currentEnd} of ${props.length}`})</span></th>
         <th className="header-element author">Author</th>
         <th className="header-element wordcount">Words
           <i onClick={() => {setSort('Words')}} className={wordsClass} aria-hidden="true"></i>

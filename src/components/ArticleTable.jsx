@@ -6,6 +6,8 @@ const ArticleTable = (props) => {
   return (
     <table>
       <Header
+        currentEnd={props.currentEnd}
+        length={props.length}
         submittedLowToHigh={props.submittedLowToHigh}
         wordsLowToHigh={props.wordsLowToHigh} />
       <Articles data={props.data} />

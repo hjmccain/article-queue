@@ -1,6 +1,5 @@
 import React from 'react';
 import SingleArticle from './SingleArticle';
-import '../style/Articles.css';
 import uuidV4 from 'uuid/v4';
 
 const Articles = (props) => {

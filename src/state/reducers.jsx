@@ -45,6 +45,10 @@ const state = (state = {
       });
     case actions.GET_DATA_ERROR:
       return state = Object.assign({}, state, { getDataError: true });
+    case actions.GET_LENGTH_SUCCESS:
+      return Object.assign({}, state, { length: action.length, lengthError: false });
+    case actions.GET_LENGTH_ERROR:
+      return Object.assign({}, state, { length: 'Unknown', lengthError: true });
     default:
       return state;
   }

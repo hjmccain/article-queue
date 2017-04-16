@@ -15,4 +15,9 @@ app.get('/data/:end', (req, res) => {
   return res.status(200).json(range);
 });
 
+app.get('/length', (req, res) => {
+  let length = data1.length + data2.length;
+  return res.status(200).json(length);
+});
+
 module.exports = app;

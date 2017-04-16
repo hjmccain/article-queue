@@ -43,3 +43,7 @@ img {
   display: inline-block;
   height: 60px;
 }
+
+.article-title span {
+  font-weight: 400;
+}
