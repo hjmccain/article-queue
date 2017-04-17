@@ -2,7 +2,7 @@
 
 ## Setup:
 
-* $ git clone https://github.com/hjmccain/article-queue.git <YOUR DIR NAME>
+* $ git clone https://github.com/hjmccain/article-queue.git < YOUR DIR NAME >
 * Run server: node server
 * Run react app: yarn start
 
