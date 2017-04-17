@@ -6,23 +6,16 @@ import '../style/Header.css';
 const Header = (props) => {
   const { wordsLowToHigh, submittedLowToHigh, setSort } = props;
 
-  let wordsClass = "fa fa-sort";
-  let submittedClass = "fa fa-sort";
-
-  if (wordsLowToHigh === null) {
-    wordsClass = "fa fa-sort";
-  } else if (wordsLowToHigh === false) {
-    wordsClass = "fa fa-caret-up"
-  } else {
-    wordsClass = "fa fa-caret-down"
-  }
-
-  if (submittedLowToHigh === null) {
-    submittedClass = "fa fa-sort";
-  } else if (submittedLowToHigh === false) {
-    submittedClass = "fa fa-caret-up"
-  } else {
-    submittedClass = "fa fa-caret-down"
+  const classDefiner = (state) => {
+    let className;
+    if (state === null) {
+      className = "fa fa-sort";
+    } else if (state === false) {
+      className = "fa fa-caret-up"
+    } else {
+      className = "fa fa-caret-down"
+    }
+    return className;
   }
 
   return (
@@ -32,10 +25,10 @@ const Header = (props) => {
           <span> ({`${props.currentEnd} of ${props.length}`})</span></th>
         <th className="header-element author">Author</th>
         <th className="header-element wordcount">Words
-          <i onClick={() => {setSort('Words')}} className={wordsClass} aria-hidden="true"></i>
+          <i onClick={() => {setSort('Words')}} className={classDefiner(wordsLowToHigh)} aria-hidden="true"></i>
         </th>
         <th className="header-element submitted">Submitted
-          <i onClick={() => {setSort('Submitted')}} className={submittedClass} aria-hidden="true"></i>
+          <i onClick={() => {setSort('Submitted')}} className={classDefiner(submittedLowToHigh)} aria-hidden="true"></i>
         </th>
       </tr>
     </thead>
