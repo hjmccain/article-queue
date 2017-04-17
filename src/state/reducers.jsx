@@ -18,7 +18,8 @@ const state = (state = {
         return state = Object.assign({}, state, {
           wordsLowToHigh: order,
           submittedLowToHigh: null,
-          data: sortedData
+          data: sortedData,
+          sorting: true
         });
       }
       if (action.category === 'Submitted') {
@@ -33,7 +34,8 @@ const state = (state = {
         return state = Object.assign({}, state, {
           submittedLowToHigh: order,
           wordsLowToHigh: null,
-          data: sortedData
+          data: sortedData,
+          sorting: true
         });
       }
       break;
@@ -41,6 +43,7 @@ const state = (state = {
       return state = Object.assign({}, state, {
         data: [...state.data, ...action.data],
         currentEnd: action.currentEnd,
+        sorting: false,
         getDataError: false
       });
     case actions.GET_DATA_ERROR:

@@ -10,7 +10,7 @@ const ArticleTable = (props) => {
         length={props.length}
         submittedLowToHigh={props.submittedLowToHigh}
         wordsLowToHigh={props.wordsLowToHigh} />
-      <Articles data={props.data} />
+      <Articles data={props.data} sorting={props.sorting} />
     </table>
   )
 }

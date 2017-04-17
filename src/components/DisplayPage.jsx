@@ -21,6 +21,7 @@ class DisplayPage extends React.Component {
           <img src={mic} alt="Mic.com logo"></img>
           <h2>/ unpublished</h2>
           <ArticleTable
+            sorting={this.props.sorting}
             currentEnd={this.props.currentEnd}
             length={this.props.length}
             data={this.props.data}
@@ -40,7 +41,8 @@ const mapStateToProps = (state) => ({
   data: state.data,
   wordsLowToHigh: state.wordsLowToHigh,
   submittedLowToHigh: state.submittedLowToHigh,
-  length: state.length
+  length: state.length,
+  sorting: state.sorting
 });
 
 export default connect(mapStateToProps, { getData, getLength })(DisplayPage);

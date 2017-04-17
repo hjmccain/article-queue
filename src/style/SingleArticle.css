@@ -28,6 +28,21 @@ td {
     );
 }
 
+.last td {
+  animation-duration: 3s;
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+   0% {
+     filter: brightness(50%);
+   }
+
+   100% {
+     filter: brightness(100%);
+   }
+}
+
 .crop-img {
   display: inline-block;
   margin: 5px;

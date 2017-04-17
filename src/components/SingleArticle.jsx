@@ -4,7 +4,7 @@ import '../style/SingleArticle.css';
 
 const SingleArticle = (props) => {
   return (
-    <tr className="article-info">
+    <tr className={props.articleClassName}>
       <td className="article-element image">
         <div className="crop-img">
           <img src={props.imageUrl} alt=""></img>
