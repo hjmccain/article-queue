@@ -3,14 +3,15 @@ import SingleArticle from './SingleArticle';
 import uuidV4 from 'uuid/v4';
 
 const Articles = (props) => {
+  const { data, sorting } = props;
   return (
     <tbody>
-      {props.data.map((item, idx) => {
+      {data.map((item, idx) => {
         let className;
 
-        if (!props.sorting) {
-          className = ((idx >= props.data.length - 10) && (idx <= props.data.length)) ?
-            className = 'article-info last' : className = 'article-info';
+        if (!sorting && idx > 9) {
+          className = ((idx >= data.length - 10) && (idx <= data.length)) ?
+            'article-info last' : 'article-info';
         } else {
           className = 'article-info';
         }
