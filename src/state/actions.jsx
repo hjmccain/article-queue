@@ -43,7 +43,6 @@ export const getLength = () => (dispatch) => {
     if (!res.ok) { throw new Error(res.statusText) }
     return res.json();
   }).then(res => {
-    console.log(res);
     dispatch(getLengthSuccess(res))}
   ).catch(err => dispatch(getLengthError(err))
   );

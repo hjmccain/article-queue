@@ -1,10 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import reducer from './state/reducers';
-import { createLogger } from 'redux-logger';
 import { loadState, saveState } from './state/localStorage'
-
-const logger = createLogger();
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -13,7 +10,7 @@ export const store = createStore(
   reducer,
   persistedState,
   composeEnhancers(
-  applyMiddleware(thunk, logger)
+  applyMiddleware(thunk)
 ));
 
 store.subscribe(() => {
