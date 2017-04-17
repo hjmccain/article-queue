@@ -1,6 +1,6 @@
 # Hannah's Mic App
 
-## Setup:
+## Setup
 
 * $ git clone https://github.com/hjmccain/article-queue.git < YOUR DIR NAME >
 * Run server: node server
