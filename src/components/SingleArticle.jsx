@@ -14,6 +14,11 @@ const SingleArticle = (props) => {
       <div className="article-element article-title">
         <h3>{props.title}</h3>
       </div>
+      <div className="break">
+        <p className="author">author</p>
+        <p className="wordcount">word count</p>
+        <p className="submitted">published</p>
+      </div>
       <div className="article-element author"><p>{props.authorName}</p></div>
       <div className="article-element wordcount"><p>{props.words}</p></div>
       <div className="article-element submitted"><p>{moment(props.published, "YYYY-M-DD h:mm:ss").fromNow()}</p></div>

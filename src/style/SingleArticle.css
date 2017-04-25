@@ -1,3 +1,7 @@
+.break {
+  display: none;
+}
+
 .body {
   display: flex;
   flex-direction: column;

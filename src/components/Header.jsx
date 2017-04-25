@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setSort } from '../state/actions';
+import '../style/responsive.css';
 import '../style/Header.css';
 import '../style/SingleArticle.css';
 

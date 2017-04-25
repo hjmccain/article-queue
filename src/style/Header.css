@@ -1,18 +1,4 @@
-.header {
-  margin-left: 85px;
-}
 
-.header-element {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 18px;
-  background-color: #00FFBF;
-  color: #000000;
-  padding: 10px 0px 10px 0px;
-  border: 5px solid #000000;
-}
 
 span {
   margin-left: 3px;
@@ -21,4 +7,22 @@ span {
 i {
   display: inline-block;
   padding-left: 10px;
+}
+
+@media only screen and (min-width: 861px) {
+  .header {
+    margin-left: 85px;
+  }
+
+  .header-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    background-color: #00FFBF;
+    color: #000000;
+    padding: 10px 0px 10px 0px;
+    border: 5px solid #000000;
+  }
 }
