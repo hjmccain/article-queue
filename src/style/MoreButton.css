@@ -1,6 +1,7 @@
 .button-container {
   margin: 20px 0px 20px 0px;
-  text-align: center;
+  text-align: left;
+  width: 78vw;
 }
 
 .button-container i {
