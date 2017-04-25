@@ -4,14 +4,14 @@ import Header from './Header';
 
 const ArticleTable = (props) => {
   return (
-    <table>
+    <div>
       <Header
         currentEnd={props.currentEnd}
         length={props.length}
         submittedLowToHigh={props.submittedLowToHigh}
         wordsLowToHigh={props.wordsLowToHigh} />
       <Articles data={props.data} sorting={props.sorting} />
-    </table>
+    </div>
   )
 }
 

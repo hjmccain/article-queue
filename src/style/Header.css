@@ -1,23 +1,24 @@
-/* mic green: #00FFBF */
+.header {
+  margin-left: 85px;
+}
 
-th {
+.header-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
   background-color: #00FFBF;
   color: #000000;
-  padding: 5px 20px 5px 20px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
+  padding: 10px 0px 10px 0px;
+  border: 5px solid #000000;
+}
+
+span {
+  margin-left: 3px;
 }
 
 i {
   display: inline-block;
   padding-left: 10px;
-}
-
-.wordcount {
-  min-width: 105px;
-}
-
-.submitted {
-  min-width: 138px;
 }

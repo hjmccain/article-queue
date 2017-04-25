@@ -9,6 +9,10 @@ html {
   font-family: 'Lato', sans-serif;
 }
 
+img {
+  margin-left: 85px;
+}
+
 img, h2 {
   display: inline-block;
   margin: 0px;

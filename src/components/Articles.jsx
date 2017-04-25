@@ -5,7 +5,7 @@ import uuidV4 from 'uuid/v4';
 const Articles = (props) => {
   const { data, sorting } = props;
   return (
-    <tbody>
+    <div className="body">
       {data.map((item, idx) => {
         let className;
 
@@ -27,7 +27,7 @@ const Articles = (props) => {
             authorName={`${item.profile.first_name} ${item.profile.last_name}`}
           />
       })}
-    </tbody>
+    </div>
   )
 }
 
